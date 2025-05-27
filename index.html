@@ -11,19 +11,27 @@
   background-color: rgb(31, 30, 30);
   color: rgb(255, 255, 255);
   font-size: 25px;
+  
 }
-       
+        
        
 .container {
-            position: absolute;
-            right: 32px;
-            left: 32px;
-            top: 2px;
-            font-size: 24px;
+           position:absolute;
+           right: 32px;
+           left: 32px;
+           top: 2px;
+           font-size: 24px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+        }
 
+        .logo {
+            max-width: 128px;
+            max-height: 100px;
+            margin-top: 1px;
+            filter: brightness(3.5);
+            padding-top: 10px;
         }
 
         .menu-link {
@@ -37,22 +45,14 @@
             color: white;
         }
 
-        .logo {
-            max-width: 128px;
-            max-height: 100px;
-            margin-top: 1px;
-            filter: brightness(3.5);
-            padding-top: 10px;
-        }
+        
 
         .headline {
-            position: absolute;
-            left: 50px;
-            top: 250px;
-            color: white;
-            font-size: 70px;
-            width: 500px;
-            text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+            margin: 250px 0 0 50px; 
+      color: white;
+      font-size: 70px;
+      width: 500px;
+      text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
         }
 
         .marked {
@@ -62,19 +62,21 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
   text-align: center;
+  margin-left: 80px;
   margin-right: 60px;
-  margin-left: 80px; 
         }
+       
+
 
 .cards1{
 display: flex;
 align-items: center;
-position: relative;
 left: 32px;
 right: 32px;
 justify-content: space-between;
 border-radius: 10px;
 top: 900px;
+position: relative;
 }
 
 .title {
@@ -160,6 +162,6 @@ button:hover, a:hover {
     <p><button>Lernen</button></p>
   </div>
 </div>
-
+<!--Test-->
 </body>
 </html>
