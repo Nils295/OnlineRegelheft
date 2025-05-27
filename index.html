@@ -58,7 +58,7 @@
           flex-wrap: wrap;
           gap: 32px;
           justify-content: center;
-          margin: 64px 32px 0 32px;
+          margin: 164px 0 0 0;
         }
         .card {
       background: #222;
@@ -70,7 +70,7 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      margin-bottom: 32px;
+      margin-bottom: 0px;
     }
        
     .img {
@@ -79,7 +79,10 @@
   object-fit: cover;
 }
 
-
+.headline{
+  margin: 220px 0 300px 100px;
+  font-size: 100px;
+}
 
 .title {
   color: grey;
@@ -111,17 +114,32 @@ button:hover, a:hover {
 
 @media (max-width: 700px) {
   .headline{
-    font-size: 40px;
+    font-size: 90px;
     width: 100%;
-    margin: 50px 0 0 0;
+    margin: 90px 0 0 0;
     text-align: center;
   }
   .container{
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    margin: 16px;
+    top: 12px;
   }
 }
  
+.card-title {
+  height: 100px;                          /* Fixed height (adjust as needed for your design) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(32px, 5vw, 58px);   /* Responsive font size */
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+  padding: 0 8px;
+  line-height: 1.1;
+  
+}
 
 
 
@@ -131,7 +149,7 @@ button:hover, a:hover {
 <body>
 
     <nav class="container">
-        <img src="logo5.png" class="logo" alt="logo">
+        <img src="img5/logo5.png" class="logo" alt="logo">
         <div class="navigation">
     <a class="menu-link" href="#">Button1</a>
     <a class="menu-link" href="#">Button2</a>
@@ -143,50 +161,45 @@ button:hover, a:hover {
     <h1 class="headline">Mathe Formeln verstehen <span class="marked">leicht </span> gemacht!</h1>
     <section class="cards-grid">
       <div class="card">
-        <img class="img" src="sinus.jpg" alt="Sinus Funktion">
-        <h1>Sinus Funktion</h1>
+        <img class="img" src="img5/sinus.jpg" alt="Sinus Funktion">
+        <h1 class="card-title">Sinus <br> Funktion</h1>
         <p class="title">Kurzbeschreibung</p>
         <p>Kurze Text möglichkeit</p>
         <p><button>Lernen</button></p>
       </div>
       <div class="card">
-        <img class="img" src="kosinus.jpg" alt="Kosinus Funktion">
-        <h1>Kosinus Funktion</h1>
+        <img class="img" src="img5/kosinus.jpg" alt="Kosinus Funktion">
+        <h1 class="card-title">Kosinus <br> Funktion</h1>
         <p class="title">Kurzbeschreibung</p>
         <p>Kurze Text möglichkeit</p>
         <p><button>Lernen</button></p>
       </div>
       <div class="card">
-        <img class="img" src="tangens.jpg" alt="Tangens Funktion">
-        <h1>Tangens Funktion</h1>
+        <img class="img" src="img5/tangens.jpg" alt="Tangens Funktion">
+        <h1 class="card-title">Tangens <br> Funktion</h1>
         <p class="title">Kurzbeschreibung</p>
         <p>Kurze Text möglichkeit</p>
         <p><button>Lernen</button></p>
       </div>
       <div class="card">
-        <img class="img" src="sinus.jpg" alt="Arkussinus Funktion">
-        <h1>Arkussinus Funktion</h1>
+        <img class="img" src="img5/sinus.jpg" alt="Arkussinus Funktion">
+        <h1 class="card-title">Arkussinus <br> Funktion</h1>
         <p class="title">Kurzbeschreibung</p>
         <p>Kurze Text möglichkeit</p>
         <p><button>Lernen</button></p>
       </div>
       <!-- Add more cards below as needed -->
-      <div class="card">
-        <img class="img" src="img5/new1.jpg" alt="Neue Funktion 1">
-        <h1>Neue Funktion 1</h1>
-        <p class="title">Kurzbeschreibung</p>
-        <p>Kurze Text möglichkeit</p>
-        <p><button>Lernen</button></p>
-      </div>
-      <div class="card">
-        <img class="img" src="img5/new2.jpg" alt="Neue Funktion 2">
-        <h1>Neue Funktion 2</h1>
-        <p class="title">Kurzbeschreibung</p>
-        <p>Kurze Text möglichkeit</p>
-        <p><button>Lernen</button></p>
-      </div>
+    
     </section>
   </main>
-<!--Test-->
+
+  <script src="https://cdn.jsdelivr.net/npm/fitty@2.3.6/dist/fitty.min.js"></script>
+  <script>
+    fitty('.card-title', {
+      minSize: 16,
+      maxSize: 32
+    });
+  </script>
+
 </body>
 </html>
