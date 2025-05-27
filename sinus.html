@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Sinus Funktion Lernen</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+      body {
+      padding: 0;
+      background-color: #1f1e1e;
+      color: #fff;
+      font-size: 25px;
+      margin: 0;
+      user-select: none;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 12px;
+      position: relative;
+      flex-wrap: nowrap;
+    }
+    .logo {
+      max-width: 128px;
+      max-height: 100px;
+      filter: brightness(3.5);
+      padding-top: 10px;
+    }
+    .navigation {
+      display: flex;
+      gap: 16px;
+    }
+    .menu-link {
+      color: white;
+      text-decoration: none;
+      margin-left: 16px;
+    }
+    .menu-link:hover {
+      text-decoration: underline;
+      color: white;
+    }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+    .headline {
+      color: white;
+      font-size: 60px;
+      width: 100%;
+      text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+      margin: 48px 0 40px 0;
+      text-align: left;
+    }
+    .section-title {
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: bold;
+      margin-top: 48px;
+      margin-bottom: 20px;
+      text-align: left;
+      color: rgb(108, 106, 226);
+    }
+    .sinus-img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+      display: block;
+      margin: 30px auto;
+    }
+    ul {
+      margin-left: 32px;
+      margin-bottom: 30px;
+    }
+    .back-btn {
+      display: inline-block;
+      border: none;
+      outline: 0;
+      padding: 10px 24px;
+      color: white;
+      background: #000;
+      text-align: center;
+      cursor: pointer;
+      font-size: 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 30px;
+      margin-bottom: 16px;
+      transition: opacity 0.2s;
+    }
+    .back-btn:hover {
+      opacity: 0.7;
+    }
+    @media (max-width: 700px) {
+      .container {
+        flex-direction: row;
+        align-items: center;
+        margin: 16px;
+        gap: 12px;
+      }
+      .logo {
+        max-width: 80px;
+        max-height: 64px;
+        padding-top: 0;
+      }
+      .navigation {
+        gap: 8px;
+      }
+      .headline {
+        font-size: 32px;
+        margin: 32px 0 24px 0;
+        text-align: center;
+      }
+      .section-title {
+        font-size: clamp(22px, 6vw, 36px);
+        margin-top: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="container">
+    <img src="img5/logo5.png" class="logo" alt="OnlineRegelheft Logo">
+    <div class="navigation">
+      <a class="menu-link" href="index.html">Startseite</a>
+      <a class="menu-link" href="#">Button2</a>
+      <a class="menu-link" href="#">Button3</a>
+      <a class="menu-link" href="#support-section">Support</a>
+    </div>
+  </nav>
+  <main>
+    <h1 class="headline">Sinus Funktion Lernen</h1>
+    <section>
+      <h2>Definition</h2>
+      <p>Die Sinusfunktion ist eine periodische Funktion, die in der Mathematik und Physik häufig verwendet wird. Ihre Gleichung lautet: <strong>f(x) = sin(x)</strong>.</p>
+      <h2>Graph</h2>
+      <img src="img5/sinus.jpg" alt="Sinus Graph" style="max-width: 400px;">
+      <h2>Eigenschaften</h2>
+      <ul>
+        <li>Periodisch mit Periode 2π</li>
+        <li>Wertebereich: [-1, 1]</li>
+        <li>Nullstellen bei nπ mit n ∈ ℤ</li>
+      </ul>
+      <!-- Weitere Inhalte nach Wunsch -->
+    </section>
+  </main>
+</body>
+</html>
