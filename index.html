@@ -11,7 +11,7 @@
   background-color: rgb(31, 30, 30);
   color: rgb(255, 255, 255);
   font-size: 25px;
-  
+  user-select: none;
 }
         
        
@@ -83,6 +83,7 @@
 .headline{
   margin: 220px 0 300px 100px;
   font-size: 100px;
+
 }
 
 .title {
@@ -129,11 +130,11 @@ button:hover, a:hover {
 }
  
 .card-title {
-  height: 100px;                          /* Fixed height (adjust as needed for your design) */
+  height: 100px;                         
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(32px, 5vw, 58px);   /* Responsive font size */
+  font-size: clamp(32px, 5vw, 58px);   
   text-align: center;
   margin: 0;
   overflow: hidden;
@@ -142,7 +143,30 @@ button:hover, a:hover {
   
 }
 
+.support-form{
+  padding: 86px 0 0 100px ;
+}
 
+html {
+  scroll-behavior: smooth;
+}
+.learn-link-btn {
+  display: inline-block;
+  border: none;
+  outline: 0;
+  padding: 8px;
+  color: white;
+  background: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.learn-link-btn:hover {
+  opacity: 0.7;
+}
 
     </style>
 </head>
@@ -155,7 +179,7 @@ button:hover, a:hover {
     <a class="menu-link" href="#">Button1</a>
     <a class="menu-link" href="#">Button2</a>
     <a class="menu-link" href="#">Button3</a>
-    <a class="menu-link" href="#">Support</a>
+    <a class="menu-link" href="#support-section">Support</a>
     </div>
     </nav>
 <main>
@@ -166,7 +190,7 @@ button:hover, a:hover {
         <h1 class="card-title">Sinus <br> Funktion</h1>
         <p class="title">sin(α)</p>
         <p>Kurze Text möglichkeit</p>
-        <p><button>Lernen</button></p>
+        <p><a href="sinus.html"><button>Lernen</button></a></p>
       </div>
       <div class="card">
         <img class="img" src="img5/kosinus.jpg" alt="Kosinus Funktion">
@@ -215,6 +239,46 @@ button:hover, a:hover {
         <p><button>Lernen</button></p>
       </div>
 
+      <div class="card">
+        <img class="img" src="img5/sinus.jpg" alt="Arkussinus Funktion">
+        <h1 class="card-title">Platz <br> Halter</h1>
+        <p class="title">Kurzbeschreibung</p>
+        <p>Kurze Text möglichkeit</p>
+        <p><button>Lernen</button></p>
+      </div>
+
+      <div class="card">
+        <img class="img" src="img5/sinus.jpg" alt="Arkussinus Funktion">
+        <h1 class="card-title">Platz <br> Halter</h1>
+        <p class="title">Kurzbeschreibung</p>
+        <p>Kurze Text möglichkeit</p>
+        <p><button>Lernen</button></p>
+      </div>
+
+      <div class="card">
+        <img class="img" src="img5/sinus.jpg" alt="Arkussinus Funktion">
+        <h1 class="card-title">Platz <br> Halter</h1>
+        <p class="title">Kurzbeschreibung</p>
+        <p>Kurze Text möglichkeit</p>
+        <p><button>Lernen</button></p>
+      </div>
+
+      <div class="card">
+        <img class="img" src="img5/sinus.jpg" alt="Arkussinus Funktion">
+        <h1 class="card-title">Platz <br> Halter</h1>
+        <p class="title">Kurzbeschreibung</p>
+        <p>Kurze Text möglichkeit</p>
+        <p><button>Lernen</button></p>
+      </div>
+
+      <div class="card">
+        <img class="img" src="img5/sinus.jpg" alt="Arkussinus Funktion">
+        <h1 class="card-title">Platz <br> Halter</h1>
+        <p class="title">Kurzbeschreibung</p>
+        <p>Kurze Text möglichkeit</p>
+        <p><button>Lernen</button></p>
+      </div>
+
 
     </section>
   </main>
@@ -226,6 +290,11 @@ button:hover, a:hover {
       maxSize: 42
     });
   </script>
+
+<section  id="support-section">
+<iframe class="support-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdmiV5QAxRym99E-5Jt5t7LWLcLis0Kye1GV2v_Ig_CxFY1XA/viewform?embedded=true" width="640" height="686" frameborder="0" marginheight="0" marginwidth="0">Wird geladen…</iframe>
+</section>
+
 
 </body>
 </html>
