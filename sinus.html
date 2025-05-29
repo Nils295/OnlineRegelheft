@@ -350,23 +350,23 @@ function checkAnswer(num) {
   result.style.color = correct ? "limegreen" : "crimson";
 }
 
-    <!-- Diskussionsbereich (Disqus) -->
+ <!-- Diskussionsbereich (Disqus) -->
 <h2>Diskussion & Fragen</h2>
 <div id="disqus_thread"></div>
 <script>
 var disqus_config = function () {
-  this.page.url = window.location.href;      // Seiten-URL als eindeutiger Schlüssel
-  this.page.identifier = window.location.pathname; // Pfad als eindeutiger Bezeichner
+  this.page.url = window.location.href; // Jede URL = eigener Bereich
+  this.page.identifier = window.location.pathname; // Jede Seite = eigenes Thema
 };
 (function() {
   var d = document, s = d.createElement('script');
-  s.src = 'https://onlinereglheft.disqus.com/embed.js';  // <-- Ersetze DEIN_SHORTNAME!
+  s.src = 'https://onlinereglheft.disqus.com/embed.js'; // <-- Dein Shortname!
   s.setAttribute('data-timestamp', +new Date());
   (d.head || d.body).appendChild(s);
 })();
 </script>
 <noscript>Bitte aktiviere JavaScript, um die Kommentare von Disqus zu sehen.</noscript>
-</script>
+    
 <section id="support-section" class="support-section">
   <div class="support-form-container">
     <iframe 
