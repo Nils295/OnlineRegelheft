@@ -243,6 +243,26 @@ button:hover {
     padding: 8px 0;
   }
 }
+
+    <style>
+    /* Disqus-Kommentarbereich optisch hervorheben */
+    #disqus_thread {
+      margin: 32px auto 48px auto;
+      max-width: 700px;
+      background: #f5f7fa;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+      padding: 24px 16px;
+      min-height: 200px;
+      transition: box-shadow 0.3s;
+    }
+
+    #disqus_thread:empty {
+      min-height: 200px;
+      background: #f5f7fa url('https://disqus.com/api/docs/images/disqus-logo-blue.png') center 32px no-repeat;
+      background-size: 80px 40px;
+    }
+  </style>
   </style>
 </head>
 <body>
