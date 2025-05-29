@@ -370,22 +370,22 @@ function checkAnswer(num) {
   result.style.color = correct ? "limegreen" : "crimson";
 }
 
- <!-- Diskussionsbereich (Disqus) -->
-<h2>Diskussion & Fragen</h2>
-<div id="disqus_thread"></div>
-<script>
-var disqus_config = function () {
-  this.page.url = window.location.href; // Jede URL = eigener Bereich
-  this.page.identifier = window.location.pathname; // Jede Seite = eigenes Thema
-};
-(function() {
-  var d = document, s = d.createElement('script');
-  s.src = 'https://onlinereglheft.disqus.com/embed.js'; // <-- Dein Shortname!
-  s.setAttribute('data-timestamp', +new Date());
-  (d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Bitte aktiviere JavaScript, um die Kommentare von Disqus zu sehen.</noscript>
+<!-- Diskussionsbereich (Disqus) -->
+374| <h2>Diskussion & Fragen</h2>
+375| <div id="disqus_thread"></div>
+376| <script>
+377| var disqus_config = function () {
+378|   this.page.url = window.location.href;
+379|   this.page.identifier = window.location.pathname;
+380| };
+381| (function() {
+382|   var d = document, s = d.createElement('script');
+383|   s.src = 'https://onlinereglheft.disqus.com/embed.js';
+384|   s.setAttribute('data-timestamp', +new Date());
+385|   (d.head || d.body).appendChild(s);
+386| })();
+387| </script>
+388| <noscript>Bitte aktiviere JavaScript, um die Kommentare von Disqus zu sehen.</noscript>
     
 <section id="support-section" class="support-section">
   <div class="support-form-container">
