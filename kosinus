@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kosinus-Funktion lernen</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            padding: 0;
+            background-color: #1f1e1e;
+            color: #fff;
+            font-size: 25px;
+            margin: 0;
+            user-select: none;
+        }
+        
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 12px;
+            position: relative;
+            flex-wrap: nowrap;
+        }
+        
+        .logo {
+            max-width: 128px;
+            max-height: 100px;
+            filter: brightness(3.5);
+            padding-top: 10px;
+        }
+        
+        .navigation {
+            display: flex;
+            gap: 16px;
+        }
+        
+        .menu-link {
+            color: white;
+            text-decoration: none;
+            margin-left: 16px;
+        }
+        
+        .menu-link:hover {
+            text-decoration: underline;
+            color: white;
+        }
+        
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        
+        .headline {
+            color: white;
+            font-size: 110px;
+            width: 100%;
+            text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+            margin: 48px 0 40px 0;
+            text-align: left;
+        }
+        
+        .section-title {
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: bold;
+            margin-top: 48px;
+            margin-bottom: 20px;
+            text-align: left;
+            color: rgb(108, 106, 226);
+        }
+        
+        .responsive-iframe-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            /* matches your original width */
+            margin: 0 auto;
+            padding-bottom: 68.75%;
+            /* (550/800)*100 = 68.75% for 800x550 aspect */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .responsive-iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        ul {
+            margin-left: 32px;
+            margin-bottom: 30px;
+        }
+        
+        .vid-headline {
+            font-size: clamp(32px, 5vw, 48px);
+        }
+        
+        .youtube-responsive {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 Aspect Ratio */
+            padding-top: 24px;
+            height: 0;
+            overflow: hidden;
+            margin: 24px 0;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+        }
+        
+        .youtube-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 12px;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            border: none;
+            outline: 0;
+            padding: 10px 24px;
+            color: white;
+            background: #000;
+            text-align: center;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-top: 30px;
+            margin-bottom: 16px;
+            transition: opacity 0.2s;
+        }
+        
+        .back-btn:hover {
+            opacity: 0.7;
+        }
+        
+        @media (max-width: 700px) {
+            .container {
+                flex-direction: row;
+                align-items: center;
+                margin: 16px;
+                gap: 12px;
+            }
+            .logo {
+                max-width: 80px;
+                max-height: 64px;
+                padding-top: 0;
+            }
+            .navigation {
+                gap: 8px;
+            }
+            .headline {
+                font-size: 32px;
+                margin: 32px 0 24px 0;
+                text-align: center;
+            }
+            .section-title {
+                font-size: clamp(22px, 6vw, 36px);
+                margin-top: 32px;
+            }
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .exercise-input {
+            margin-left: 10px;
+            padding: 6px;
+            border-radius: 6px;
+            border: 1px solid #aaa;
+            width: 120px;
+            font-size: 18px;
+        }
+        
+        button {
+            margin-left: 8px;
+            font-size: 18px;
+            border-radius: 6px;
+            border: none;
+            padding: 6px 12px;
+            background: #665cff;
+            color: white;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        button:hover {
+            background: #4541a8;
+        }
+        
+        .exercise-section {
+            background: #292929;
+            margin: 48px auto 24px auto;
+            /* auto left/right centers block */
+            padding: 20px 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            /* set a reasonable max-width */
+            text-align: center;
+            /* center text and inline elements */
+        }
+        
+        .exercise-list {
+            margin-left: 0;
+            margin-bottom: 18px;
+            padding-left: 0;
+            list-style-position: inside;
+            /* numbers inside for centering */
+            text-align: left;
+            /* keeps numbers and text aligned nicely */
+            display: inline-block;
+            /* allows centering with parent text-align:center */
+        }
+        
+        .exercise-list li {
+            margin-bottom: 18px;
+            text-align: left;
+            /* keeps input/button aligned with text */
+        }
+        
+        .exercise-input,
+        button,
+        #result1,
+        #result2,
+        #result3,
+        #result4 {
+            vertical-align: middle;
+        }
+        
+        .support-section {
+            width: 100%;
+            min-height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 0;
+            background: transparent;
+        }
+        
+        .support-form-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        
+        #support-form {
+            max-width: 640px;
+            width: 100%;
+            min-width: 220px;
+            border-radius: 14px;
+            border: none;
+        }
+        /* Responsive: Shrink on mobile */
+        
+        @media (max-width: 700px) {
+            #support-form {
+                max-width: 98vw;
+                height: 520px;
+                /* Adjust as needed for mobile */
+            }
+            .support-section {
+                padding: 8px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="container">
+        <img src="img5/logo5.png" class="logo" alt="OnlineRegelheft Logo">
+        <div class="navigation">
+            <a class="menu-link" href="index.html">Startseite</a>
+            <a class="menu-link" href="#">Button2</a>
+            <a class="menu-link" href="#">Button3</a>
+            <a class="menu-link" href="#support-section">Support</a>
+        </div>
+    </nav>
+    <main>
+        <h1 class="headline">Kosinus Funktion</h1>
+        <section>
+            <h2>Definition</h2>
+            <p>Die <strong>Kosinusfunktion</strong> (kurz:sin) ist eine mathematische Funktion, die einem Winkel einen bestimmten Zahlenwert zuordnet. Man kennt sie vor allem aus der <strong>Trigonometrie</strong>. In einem rechtwinkligen Dreieck ist der
+                Kosinus eines Winkels das Verhältnis von <strong>Ankathete</strong> zu <strong>Hypotenuse</strong>.</p>
+            <h2>Graph</h2>
+            <div class="responsive-iframe-container">
+                <iframe scrolling="no" title="Die allgemeine Sinusfunktion" src="https://www.geogebra.org/m/j5ecGevA" width="800" height="550" style="border:0px;"> 
+        </iframe>
+            </div>
+            <h2>Eigenschaften</h2>
+            <ul>
+                <li>Periodisch mit Periode 2π</li>
+                <li>Wertebereich: [-1, 1]</li>
+                <li>Nullstellen bei nπ mit n ∈ ℤ</li>
+            </ul>
+
+            <div class="video-section">
+                <h3 class="vid-headline">Erklärvideo zur Kosnusfunktion</h3>
+                <div class="youtube-responsive">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/P2JlHT--q6o?si=KWlVhZ7fT7sIdTDJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <section class="exercise-section">
+        <h2 class="section-title">Übungsaufgaben zur Kosinusfunktion</h2>
+        <ol class="exercise-list">
+            <li>
+                Berechne den Wert von <strong>cos(30°) gerundet auf 3 Nachkommastellen</strong>.
+                <input type="text" id="answer1" class="exercise-input" placeholder="Deine Antwort">
+                <button onclick="checkAnswer(1)">Prüfen</button>
+                <span id="result1"></span>
+            </li>
+            <li>
+                Berechne den Wert von <strong>cos(90°)</strong>.
+                <input type="text" id="answer2" class="exercise-input" placeholder="Deine Antwort">
+                <button onclick="checkAnswer(2)">Prüfen</button>
+                <span id="result2"></span>
+            </li>
+            <li>
+                Löse die Gleichung <strong>sin(x) = 0.5</strong> im Bereich 0 ≤ x &lt; 2π (eine Lösung, in π angeben).
+                <input type="text" id="answer3" class="exercise-input" placeholder="Deine Antwort">
+                <button onclick="checkAnswer(3)">Prüfen</button>
+                <span id="result3"></span>
+            </li>
+            <li>
+                Gib die Amplitude der Funktion <strong>f(x) = 3·sin(x)</strong> an.
+                <input type="text" id="answer4" class="exercise-input" placeholder="Deine Antwort">
+                <button onclick="checkAnswer(4)">Prüfen</button>
+                <span id="result4"></span>
+            </li>
+        </ol>
+    </section>
+    <script>
+        function normalizeInput(str) {
+            return str.trim().replace(",", ".").toLowerCase();
+        }
+
+        function checkAnswer(num) {
+            let input = document.getElementById("answer" + num).value;
+            let result = document.getElementById("result" + num);
+            let correct = false;
+            switch (num) {
+                case 1:
+                    // cos(30°) = 0,707
+                    correct = (normalizeInput(input) === "0,707" || normalizeInput(input) === "1/2");
+                    break;
+                case 2:
+                    // cos(90°) = 0
+                    correct = (normalizeInput(input) === "0");
+                    break;
+                case 3:
+                    // sin(x)=0.5 ⇒ x=π/6 oder x=5π/6 (hier reicht π/6)
+                    correct = (normalizeInput(input) === "π/6" || normalizeInput(input) === "pi/6");
+                    break;
+                case 4:
+                    // Amplitude = 3
+                    correct = (normalizeInput(input) === "3");
+                    break;
+            }
+            result.innerText = correct ? "✅ Richtig!" : "❌ Falsch, versuch es nochmal!";
+            result.style.color = correct ? "limegreen" : "crimson";
+        }
+    </script>
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function() {
+            this.page.url = window.location.href;
+            this.page.identifier = window.location.pathname;
+        };
+        (function() {
+            var d = document,
+                s = d.createElement('script');
+            s.src = 'https://onlinereglheft.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Bitte aktiviere JavaScript, um die Kommentare von Disqus zu sehen.</noscript>
+
+    <section id="support-section" class="support-section">
+        <div class="support-form-container">
+            <iframe id="support-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdmiV5QAxRym99E-5Jt5t7LWLcLis0Kye1GV2v_Ig_CxFY1XA/viewform?embedded=true" width="640" height="686" frameborder="0" marginheight="0" marginwidth="0" allowfullscreen>Wird geladen…</iframe>
+        </div>
+    </section>
+
+</body>
+
+</html>
