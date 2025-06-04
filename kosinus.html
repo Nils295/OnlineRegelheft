@@ -295,10 +295,11 @@
         <section>
             <h2>Definition</h2>
             <p>Die <strong>Kosinusfunktion</strong> (kurz:sin) ist eine mathematische Funktion, die einem Winkel einen bestimmten Zahlenwert zuordnet. Man kennt sie vor allem aus der <strong>Trigonometrie</strong>. In einem rechtwinkligen Dreieck ist der
-                Kosinus eines Winkels das Verhältnis von <strong>Ankathete</strong> zu <strong>Hypotenuse</strong>.</p>
+                Kosinus eines Winkels das Verhältnis von <strong>Ankathete</strong> zu <strong>Hypotenuse</strong>. In einem Einheitskreis, der einen Radius von 1 hat, entspricht der Kosinus eines Winkels dem x-Koordinatenwert des Punktes, an dem der
+                Strahl, der den Winkel bildet, den Kreis schneidet.</p>
             <h2>Graph</h2>
             <div class="responsive-iframe-container">
-                <iframe scrolling="no" title="Die allgemeine Sinusfunktion" src="https://www.geogebra.org/m/j5ecGevA" width="800" height="550" style="border:0px;"> 
+                <iframe scrolling="no" title="Die allgemeine Koinusfunktion" src="https://www.geogebra.org/m/j5ecGevA" width="800" height="550" style="border:0px;"> 
         </iframe>
             </div>
             <h2>Eigenschaften</h2>
@@ -311,7 +312,7 @@
             <div class="video-section">
                 <h3 class="vid-headline">Erklärvideo zur Kosnusfunktion</h3>
                 <div class="youtube-responsive">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/P2JlHT--q6o?si=KWlVhZ7fT7sIdTDJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/P2JlHT--q6o?si=l-Ks0USOKeXRGHIJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
@@ -336,13 +337,13 @@
                 <span id="result2"></span>
             </li>
             <li>
-                Löse die Gleichung <strong>sin(x) = 0.5</strong> im Bereich 0 ≤ x &lt; 2π (eine Lösung, in π angeben).
+                Ist die Gleichung <strong>cos(24°) = cos(-24°) </strong> richtig oder falsch
                 <input type="text" id="answer3" class="exercise-input" placeholder="Deine Antwort">
                 <button onclick="checkAnswer(3)">Prüfen</button>
                 <span id="result3"></span>
             </li>
             <li>
-                Gib die Amplitude der Funktion <strong>f(x) = 3·sin(x)</strong> an.
+                Gib die Amplitude der Funktion <strong>f(x) = 3·cos(x)</strong> an.
                 <input type="text" id="answer4" class="exercise-input" placeholder="Deine Antwort">
                 <button onclick="checkAnswer(4)">Prüfen</button>
                 <span id="result4"></span>
@@ -361,15 +362,15 @@
             switch (num) {
                 case 1:
                     // cos(30°) = 0,707
-                    correct = (normalizeInput(input) === "0,707" || normalizeInput(input) === "1/2");
+                    correct = (normalizeInput(input) === "0,707");
                     break;
                 case 2:
                     // cos(90°) = 0
                     correct = (normalizeInput(input) === "0");
                     break;
                 case 3:
-                    // sin(x)=0.5 ⇒ x=π/6 oder x=5π/6 (hier reicht π/6)
-                    correct = (normalizeInput(input) === "π/6" || normalizeInput(input) === "pi/6");
+                    // cos(24°) = cos(-24°) ⇒ richtig
+                    correct = (normalizeInput(input) === "richtig" || normalizeInput(input) === "wahr");
                     break;
                 case 4:
                     // Amplitude = 3
