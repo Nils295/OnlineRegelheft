@@ -283,58 +283,56 @@
       <div class="video-section">
         <h3 class="vid-headline">Erklärvideo zur Stochastik</h3>
         <div class="youtube-responsive">
-          
-           <iframe width="560" height="315" src="https://www.youtube.com/embed/mygSTraEAkU?si=IsujYsyg314QJYhI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-          
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/mygSTraEAkU?si=IsujYsyg314QJYhI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </section>
- 
-  <section class="exercise-section">
-    <h2 class="section-title">Übungsaufgaben zur Stochastik</h2>
-    <ol class="exercise-list">
-      <li>
-        Wie groß ist die Wahrscheinlichkeit, beim einmaligen Würfeln eine gerade Zahl zu erhalten?<br>
-        <input type="text" id="answer1" class="exercise-input" placeholder="Deine Antwort">
-        <button onclick="checkAnswer(1)">Prüfen</button>
-        <span id="result1"></span>
-      </li>
-      <li>
-        Wie groß ist die Wahrscheinlichkeit, beim zweimaligen Werfen einer Münze zweimal „Kopf“ zu erhalten?<br>
-        <input type="text" id="answer2" class="exercise-input" placeholder="Deine Antwort">
-        <button onclick="checkAnswer(2)">Prüfen</button>
-        <span id="result2"></span>
-      </li>
-      <li>
-        Der Datensatz lautet: 2, 4, 4, 5, 7.<br>Wie groß ist der Median?<br>
-        <input type="text" id="answer3" class="exercise-input" placeholder="Deine Antwort">
-        <button onclick="checkAnswer(3)">Prüfen</button>
-        <span id="result3"></span>
-      </li>
-      <li>
-        Bei 10-maligem Würfeln fällt die „6“ dreimal. Wie groß ist der relative Häufigkeit der „6“?<br>
-        <input type="text" id="answer4" class="exercise-input" placeholder="Deine Antwort">
-        <button onclick="checkAnswer(4)">Prüfen</button>
-        <span id="result4"></span>
-      </li>
-    </ol>
-  </section>
 
-  <section id="support-section" class="support-section">
-    <div class="support-form-container">
-      <iframe
-        id="support-form"
-        src="https://docs.google.com/forms/d/e/1FAIpQLSdmiV5QAxRym99E-5Jt5t7LWLcLis0Kye1GV2v_Ig_CxFY1XA/viewform?embedded=true"
-        width="640"
-        height="686"
-        frameborder="0"
-        marginheight="0"
-        marginwidth="0"
-        allowfullscreen
-        >Wird geladen…</iframe>
-    </div>
-  </section>
-     </main>
+    <section class="exercise-section">
+      <h2 class="section-title">Übungsaufgaben zur Stochastik</h2>
+      <ol class="exercise-list">
+        <li>
+          Wie groß ist die Wahrscheinlichkeit, beim einmaligen Würfeln eine gerade Zahl zu erhalten?<br>
+          <input type="text" id="answer1" class="exercise-input" placeholder="Deine Antwort">
+          <button onclick="checkAnswer(1)">Prüfen</button>
+          <span id="result1"></span>
+        </li>
+        <li>
+          Wie groß ist die Wahrscheinlichkeit, beim zweimaligen Werfen einer Münze zweimal „Kopf“ zu erhalten?<br>
+          <input type="text" id="answer2" class="exercise-input" placeholder="Deine Antwort">
+          <button onclick="checkAnswer(2)">Prüfen</button>
+          <span id="result2"></span>
+        </li>
+        <li>
+          Der Datensatz lautet: 2, 4, 4, 5, 7.<br>Wie groß ist der Median?<br>
+          <input type="text" id="answer3" class="exercise-input" placeholder="Deine Antwort">
+          <button onclick="checkAnswer(3)">Prüfen</button>
+          <span id="result3"></span>
+        </li>
+        <li>
+          Bei 10-maligem Würfeln fällt die „6“ dreimal. Wie groß ist der relative Häufigkeit der „6“?<br>
+          <input type="text" id="answer4" class="exercise-input" placeholder="Deine Antwort">
+          <button onclick="checkAnswer(4)">Prüfen</button>
+          <span id="result4"></span>
+        </li>
+      </ol>
+    </section>
+    <div id="disqus_thread"></div>
+    <section id="support-section" class="support-section">
+      <div class="support-form-container">
+        <iframe
+          id="support-form"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdmiV5QAxRym99E-5Jt5t7LWLcLis0Kye1GV2v_Ig_CxFY1XA/viewform?embedded=true"
+          width="640"
+          height="686"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          allowfullscreen
+          >Wird geladen…</iframe>
+      </div>
+    </section>
+  </main>
   <script>
     function normalizeInput(str) {
       return str.trim().replace(",", ".").toLowerCase();
@@ -365,7 +363,6 @@
       result.style.color = correct ? "limegreen" : "crimson";
     }
   </script>
-  <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
       this.page.url = window.location.href;
@@ -379,6 +376,5 @@
     })();
   </script>
   <noscript>Bitte aktiviere JavaScript, um die Kommentare von Disqus zu sehen.</noscript>
-
 </body>
 </html>
