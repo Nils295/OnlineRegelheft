@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Impressum</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            padding: 0;
+            background-color: #1f1e1e;
+            color: #fff;
+            font-size: 25px;
+            margin: 0;
+            user-select: none;
+        }
+        
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 12px;
+            position: relative;
+            flex-wrap: nowrap;
+        }
+        
+        .logo {
+            max-width: 128px;
+            max-height: 100px;
+            filter: brightness(3.5);
+            padding-top: 10px;
+        }
+        
+        .navigation {
+            display: flex;
+            gap: 16px;
+        }
+        
+        .menu-link {
+            color: white;
+            text-decoration: none;
+            margin-left: 16px;
+        }
+        
+        .menu-link:hover {
+            text-decoration: underline;
+            color: white;
+        }
+        
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        
+        .headline {
+            color: white;
+            font-size: 110px;
+            width: 100%;
+            text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+            margin: 48px 0 40px 0;
+            text-align: left;
+        }
+        
+        .section-title {
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: bold;
+            margin-top: 48px;
+            margin-bottom: 20px;
+            text-align: left;
+            color: rgb(108, 106, 226);
+        }
+        
+        .responsive-iframe-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            /* matches your original width */
+            margin: 0 auto;
+            padding-bottom: 68.75%;
+            /* (550/800)*100 = 68.75% for 800x550 aspect */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .responsive-iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        ul {
+            margin-left: 32px;
+            margin-bottom: 30px;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            border: none;
+            outline: 0;
+            padding: 10px 24px;
+            color: white;
+            background: #000;
+            text-align: center;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-top: 30px;
+            margin-bottom: 16px;
+            transition: opacity 0.2s;
+        }
+        
+        .back-btn:hover {
+            opacity: 0.7;
+        }
+        
+        @media (max-width: 700px) {
+            .container {
+                flex-direction: row;
+                align-items: center;
+                margin: 16px;
+                gap: 12px;
+            }
+            .logo {
+                max-width: 80px;
+                max-height: 64px;
+                padding-top: 0;
+            }
+            .navigation {
+                gap: 8px;
+            }
+            .headline {
+                font-size: 32px;
+                margin: 32px 0 24px 0;
+                text-align: center;
+            }
+            .section-title {
+                font-size: clamp(22px, 6vw, 36px);
+                margin-top: 32px;
+            }
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        button {
+            margin-left: 8px;
+            font-size: 18px;
+            border-radius: 6px;
+            border: none;
+            padding: 6px 12px;
+            background: #665cff;
+            color: white;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        button:hover {
+            background: #4541a8;
+        }
+        
+        .support-section {
+            width: 100%;
+            min-height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 0;
+            background: transparent;
+        }
+        
+        .support-form-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        
+        #support-form {
+            max-width: 640px;
+            width: 100%;
+            min-width: 220px;
+            border-radius: 14px;
+            border: none;
+        }
+        /* Responsive: Shrink on mobile */
+        
+        @media (max-width: 700px) {
+            #support-form {
+                max-width: 98vw;
+                height: 520px;
+                /* Adjust as needed for mobile */
+            }
+            .support-section {
+                padding: 8px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="container">
+        <img class="logo" src="logo5.png" alt="OnlineRegelheft Logo">
+        <div class="navigation">
+            <a class="menu-link" href="index.html">Startseite</a>
+            <a class="menu-link" href="#">Button2</a>
+            <a class="menu-link" href="#support-section">Support</a>
+            <a class="menu-link" href="impressum.html">Impressum</a>
+
+        </div>
+    </nav>
+
+    <h1>Impressum</h1>
+
+    <h2>Angaben gemäß § 5 TMG</h2>
+    <p>
+        Nils Dyrssen, Lionel Mariaca<br> Reesenbüttler Redder 4-10<br> 22926 Ahrensburg<br> Deutschland
+    </p>
+
+    <h2>Kontakt</h2>
+    <p>
+        Telefon: +49 (0)152 26421616<br> E-Mail: <a href="mailto:dyrssennils@gmail.com">dyrssennils@gmail.com</a>
+    </p>
+
+    <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+    <p>
+        Max Mustermann<br> Musterstraße 1<br> 12345 Musterstadt
+    </p>
+
+    <h2>Haftungsausschluss</h2>
+    <p>
+        Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
+    </p>
+
+    <h2>EU-Streitschlichtung</h2>
+    <p>
+        Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:<br>
+        <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">
+      https://ec.europa.eu/consumers/odr
+    </a>
+    </p>
+
+    <h2>Haftung für Inhalte</h2>
+    <p>
+        Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen
+        zu überwachen.
+    </p>
+
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function() {
+            this.page.url = window.location.href;
+            this.page.identifier = window.location.pathname;
+        };
+        (function() {
+            var d = document,
+                s = d.createElement('script');
+            s.src = 'https://onlinereglheft.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Bitte aktiviere JavaScript, um die Kommentare von Disqus zu sehen.</noscript>
+
+    <section id="support-section" class="support-section">
+        <div class="support-form-container">
+            <iframe id="support-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdmiV5QAxRym99E-5Jt5t7LWLcLis0Kye1GV2v_Ig_CxFY1XA/viewform?embedded=true" width="640" height="686" frameborder="0" marginheight="0" marginwidth="0" allowfullscreen>Wird geladen…</iframe>
+        </div>
+    </section>
+
+</body>
+
+</html>
