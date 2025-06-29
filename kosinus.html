@@ -277,9 +277,6 @@
                 padding: 8px 0;
             }
         }
-        .kapitel {
-            color: #4f9caf;
-        }
     </style>
 </head>
 
@@ -298,201 +295,704 @@
         <h1 class="headline">Kosinus Funktion</h1>
         <section>
             <p>
-                <a href="#kapitel2" title="Weiter zu Kapitel 2" class="kapitel">
+                <a href="#kapitel2" title="Weiter zu Kapitel 2">
+        ↓ Kapitel 2: Versc<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kosinus-Funktion lernen</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            padding: 0;
+            background-color: #1f1e1e;
+            color: #fff;
+            font-size: 25px;
+            margin: 0;
+            user-select: none;
+        }
+        
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 12px;
+            position: relative;
+            flex-wrap: nowrap;
+        }
+        
+        .logo {
+            max-width: 128px;
+            max-height: 100px;
+            filter: brightness(3.5);
+            padding-top: 10px;
+        }
+        
+        .navigation {
+            display: flex;
+            gap: 16px;
+        }
+        
+        .menu-link {
+            color: white;
+            text-decoration: none;
+            margin-left: 16px;
+        }
+        
+        .menu-link:hover {
+            text-decoration: underline;
+            color: white;
+        }
+        
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        
+        .headline {
+            color: white;
+            font-size: 110px;
+            width: 100%;
+            text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+            margin: 48px 0 40px 0;
+            text-align: left;
+        }
+        
+        .section-title {
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: bold;
+            margin-top: 48px;
+            margin-bottom: 20px;
+            text-align: left;
+            color: rgb(108, 106, 226);
+        }
+        
+        .responsive-iframe-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            /* matches your original width */
+            margin: 0 auto;
+            padding-bottom: 68.75%;
+            /* (550/800)*100 = 68.75% for 800x550 aspect */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .responsive-iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        ul {
+            margin-left: 32px;
+            margin-bottom: 30px;
+        }
+        
+        .vid-headline {
+            font-size: clamp(32px, 5vw, 48px);
+        }
+        
+        .youtube-responsive {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 Aspect Ratio */
+            padding-top: 24px;
+            height: 0;
+            overflow: hidden;
+            margin: 24px 0;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+        }
+        
+        .youtube-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 12px;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            border: none;
+            outline: 0;
+            padding: 10px 24px;
+            color: white;
+            background: #000;
+            text-align: center;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-top: 30px;
+            margin-bottom: 16px;
+            transition: opacity 0.2s;
+        }
+        
+        .back-btn:hover {
+            opacity: 0.7;
+        }
+        
+        @media (max-width: 700px) {
+            .container {
+                flex-direction: row;
+                align-items: center;
+                margin: 16px;
+                gap: 12px;
+            }
+            .logo {
+                max-width: 80px;
+                max-height: 64px;
+                padding-top: 0;
+            }
+            .navigation {
+                gap: 8px;
+            }
+            .headline {
+                font-size: 32px;
+                margin: 32px 0 24px 0;
+                text-align: center;
+            }
+            .section-title {
+                font-size: clamp(22px, 6vw, 36px);
+                margin-top: 32px;
+            }
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .exercise-input {
+            margin-left: 10px;
+            padding: 6px;
+            border-radius: 6px;
+            border: 1px solid #aaa;
+            width: 120px;
+            font-size: 18px;
+        }
+        
+        button {
+            margin-left: 8px;
+            font-size: 18px;
+            border-radius: 6px;
+            border: none;
+            padding: 6px 12px;
+            background: #665cff;
+            color: white;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        button:hover {
+            background: #4541a8;
+        }
+        
+        .exercise-section {
+            background: #292929;
+            margin: 48px auto 24px auto;
+            /* auto left/right centers block */
+            padding: 20px 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            /* set a reasonable max-width */
+            text-align: center;
+            /* center text and inline elements */
+        }
+        
+        .exercise-list {
+            margin-left: 0;
+            margin-bottom: 18px;
+            padding-left: 0;
+            list-style-position: inside;
+            /* numbers inside for centering */
+            text-align: left;
+            /* keeps numbers and text aligned nicely */
+            display: inline-block;
+            /* allows centering with parent text-align:center */
+        }
+        
+        .exercise-list li {
+            margin-bottom: 18px;
+            text-align: left;
+            /* keeps input/button aligned with text */
+        }
+        
+        .exercise-input,
+        button,
+        #result1,
+        #result2,
+        #result3,
+        #result4 {
+            vertical-align: middle;
+        }
+        
+        .support-section {
+            width: 100%;
+            min-height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 0;
+            background: transparent;
+        }
+        
+        .support-form-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        
+        #support-form {
+            max-width: 640px;
+            width: 100%;
+            min-width: 220px;
+            border-radius: 14px;
+            border: none;
+        }
+        /* Responsive: Shrink on mobile */
+        
+        @media (max-width: 700px) {
+            #support-form {
+                max-width: 98vw;
+                height: 520px;
+                /* Adjust as needed for mobile */
+            }
+            .support-section {
+                padding: 8px 0;
+            }
+        }
+        .kapitel {
+            color: #4f9caf;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="container">
+        <img class="logo" src="logo5.png" alt="OnlineRegelheft Logo">
+        <div class="navigation">
+            <a class="menu-link" href="index.html">Startseite</a>
+                <a class="menu-link" href="#">Button2</a>
+                <a class="menu-link" href="#support-section">Support</a>
+                <a class="menu-link" href="impressum.html">Impressum</a>
+
+                </div>
+                </nav>
+                <main>
+                    <h1 class="headline">Kosinus Funktion</h1>
+                    <section>
+                        <p>
+                            <a href="#kapitel2" title="Weiter zu Kapitel 2" class="kapitel">
         ↓ Kapitel 2: Verschiebung
       </a>
-            </p>
-        </section>
-        <section>
-            <p>
-                <a href="#kapitel3" title="Weiter zu Kapitel 3" class="kapitel">
+                        </p>
+                    </section>
+                    <section>
+                        <p>
+                            <a href="#kapitel3" title="Weiter zu Kapitel 3" class="kapitel">
         ↓ Kapitel 3: Streckung/Stauchung
       </a>
-            </p>
-        </section>
-        <section>
-            <h2>Definition</h2>
-            <p>Die <strong>Kosinusfunktion</strong> (kurz:cos) ist eine mathematische Funktion, die einem Winkel einen bestimmten Zahlenwert zuordnet. Man kennt sie vor allem aus der <strong>Trigonometrie</strong>. In einem rechtwinkligen Dreieck ist der
-                Kosinus eines Winkels das Verhältnis von <strong>Ankathete</strong> zu <strong>Hypotenuse</strong>. In einem Einheitskreis, der einen Radius von 1 hat, entspricht der Kosinus eines Winkels dem x-Koordinatenwert des Punktes, an dem der
-                Strahl, der den Winkel bildet, den Kreis schneidet.</p>
-            <h2>Graph</h2>
-            <div class="responsive-iframe-container">
-                <iframe <iframe src="https://www.geogebra.org/classic/daqeakvj?embed/ai/false/smb/false/stb/false" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>" 
-            </div>
-            <h2>Eigenschaften</h2>
-            <ul>
-                <li>Periodisch mit Periode 2π</li>
-                <li>Wertebereich: [-1, 1]</li>
-                <li>Nullstellen bei nπ mit n ∈ ℤ</li>
-            </ul>
+                        </p>
+                    </section>
+                    <section>
+                        <h2>Definition</h2>
+                        <p>Die <strong>Kosinusfunktion</strong> (kurz:cos) ist eine mathematische Funktion, die einem Winkel einen bestimmten Zahlenwert zuordnet. Man kennt sie vor allem aus der <strong>Trigonometrie</strong>. In einem rechtwinkligen Dreieck
+                            ist der Kosinus eines Winkels das Verhältnis von <strong>Ankathete</strong> zu <strong>Hypotenuse</strong>. In einem Einheitskreis, der einen Radius von 1 hat, entspricht der Kosinus eines Winkels dem x-Koordinatenwert des
+                            Punktes, an dem der Strahl, der den Winkel bildet, den Kreis schneidet.</p>
+                        <h2>Graph</h2>
+                        <div class="responsive-iframe-container">
+                            <iframe <iframe src="https://www.geogebra.org/classic/daqeakvj?embed/ai/false/smb/false/stb/false" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>"
+                        </div>
+                        <h2>Eigenschaften</h2>
+                        <ul>
+                            <li>Periodisch mit Periode 2π</li>
+                            <li>Wertebereich: [-1, 1]</li>
+                            <li>Nullstellen bei nπ mit n ∈ ℤ</li>
+                        </ul>
 
-            <div class="video-section">
-                <h3 class="vid-headline">Erklärvideo zur Kosnusfunktion</h3>
-                <div class="youtube-responsive">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/P2JlHT--q6o?si=l-Ks0USOKeXRGHIJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-            </div>
-        </section> <br><br>
-        <section id="kapitel2">
-            <h1>2. Verschiebung der Kosnusfunktion</h1>
-            <p>
-                <p>Die Kosinusfunktion <strong>f(x) = cos(x)</strong> kann in verschiedene Richtungen verschoben werden:</p>
+                        <div class="video-section">
+                            <h3 class="vid-headline">Erklärvideo zur Kosnusfunktion</h3>
+                            <div class="youtube-responsive">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/P2JlHT--q6o?si=l-Ks0USOKeXRGHIJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </section> <br><br>
+                    <section id="kapitel2">
+                        <h1>2. Verschiebung der Kosnusfunktion</h1>
+                        <p>
+                            <p>Die Kosinusfunktion <strong>f(x) = cos(x)</strong> kann in verschiedene Richtungen verschoben werden:</p>
 
-                <h3>2.1 Vertikale Verschiebung (nach oben/unten)</h3>
-                <p>
-                    Wenn man zur Funktion einen konstanten Wert addiert oder subtrahiert, verschiebt sich der Graph entlang der y-Achse:
-                </p>
-                <ul>
-                    <li><strong>f(x) = cos(x) + c</strong> &rarr; verschiebt den Graphen um <em>c</em> Einheiten <strong>nach oben</strong></li>
-                    <li><strong>f(x) = cos(x) - c</strong> &rarr; verschiebt ihn um <em>c</em> Einheiten <strong>nach unten</strong></li>
-                </ul>
-                <p>Beispiel:<br>
-                    <strong>f(x) = cos(x) + 2</strong> &rarr; Der Scheitelpunkt liegt jetzt bei <strong>y = 3</strong> statt bei <strong>y = 1</strong>
-                </p>
+                            <h3>2.1 Vertikale Verschiebung (nach oben/unten)</h3>
+                            <p>
+                                Wenn man zur Funktion einen konstanten Wert addiert oder subtrahiert, verschiebt sich der Graph entlang der y-Achse:
+                            </p>
+                            <ul>
+                                <li><strong>f(x) = cos(x) + c</strong> &rarr; verschiebt den Graphen um <em>c</em> Einheiten <strong>nach oben</strong></li>
+                                <li><strong>f(x) = cos(x) - c</strong> &rarr; verschiebt ihn um <em>c</em> Einheiten <strong>nach unten</strong></li>
+                            </ul>
+                            <p>Beispiel:<br>
+                                <strong>f(x) = cos(x) + 2</strong> &rarr; Der Scheitelpunkt liegt jetzt bei <strong>y = 3</strong> statt bei <strong>y = 1</strong>
+                            </p>
 
-                <h3>2.2 Horizontale Verschiebung (nach links/rechts)</h3>
-                <p>
-                    Wenn man im Argument der Kosinusfunktion einen Wert addiert oder subtrahiert, verschiebt sich der Graph entlang der x-Achse:
-                </p>
-                <ul>
-                    <li><strong>f(x) = cos(x - a)</strong> &rarr; verschiebt den Graphen um <em>a</em> Einheiten <strong>nach rechts</strong></li>
-                    <li><strong>f(x) = cos(x + a)</strong> &rarr; verschiebt ihn um <em>a</em> Einheiten <strong>nach links</strong></li>
-                </ul>
-                <p>Beispiel:<br>
-                    <strong>f(x) = cos(x - π/2)</strong> &rarr; Der Y-Achsenabschnitt liegt nun bei 0 statt 1.
-                </p>
-            </p>
-        </section><br><br>
-        <section id="kapitel3">
-            <h1>3. Streckung und Stauchung der Kosinusfunktion</h1>
-            <p>
-                <p>
-                    Die Kosinusfunktion <strong>f(x) = cos(x)</strong> kann durch Multiplikation mit einem Faktor gestreckt oder gestaucht werden.
-                </p>
+                            <h3>2.2 Horizontale Verschiebung (nach links/rechts)</h3>
+                            <p>
+                                Wenn man im Argument der Kosinusfunktion einen Wert addiert oder subtrahiert, verschiebt sich der Graph entlang der x-Achse:
+                            </p>
+                            <ul>
+                                <li><strong>f(x) = cos(x - a)</strong> &rarr; verschiebt den Graphen um <em>a</em> Einheiten <strong>nach rechts</strong></li>
+                                <li><strong>f(x) = cos(x + a)</strong> &rarr; verschiebt ihn um <em>a</em> Einheiten <strong>nach links</strong></li>
+                            </ul>
+                            <p>Beispiel:<br>
+                                <strong>f(x) = cos(x - π/2)</strong> &rarr; Der Y-Achsenabschnitt liegt nun bei 0 statt 1.
+                            </p>
+                        </p>
+                    </section><br><br>
+                    <section id="kapitel3">
+                        <h1>3. Streckung und Stauchung der Kosinusfunktion</h1>
+                        <p>
+                            <p>
+                                Die Kosinusfunktion <strong>f(x) = cos(x)</strong> kann durch Multiplikation mit einem Faktor gestreckt oder gestaucht werden.
+                            </p>
 
-                <h3>3.1 Streckung/Stauchung entlang der y-Achse (Amplitude)</h3>
-                <p>
-                    Der Vorfaktor <strong>a</strong> vor dem Kosinus beeinflusst die Höhe der Wellen (Amplitude):
-                </p>
-                <ul>
-                    <li><strong>f(x) = a · cos(x)</strong></li>
-                    <li>Ist |a| &gt; 1 → <strong>Streckung</strong> in y-Richtung (höhere Wellen)</li>
-                    <li>Ist 0 &lt; |a| &lt; 1 → <strong>Stauchung</strong> in y-Richtung (flachere Wellen)</li>
-                    <li>Ist a &lt; 0 → zusätzlich <strong>Spiegelung an der x-Achse</strong></li>
-                </ul>
-                <p>Beispiele:</p>
-                <ul>
-                    <li><strong>f(x) = 2 · cos(x)</strong> → Amplitude = 2</li>
-                    <li><strong>f(x) = 0.5 · cos(x)</strong> → Amplitude = 0.5</li>
-                    <li><strong>f(x) = -1 · cos(x)</strong> → gespiegelt an der x-Achse</li>
-                </ul>
+                            <h3>3.1 Streckung/Stauchung entlang der y-Achse (Amplitude)</h3>
+                            <p>
+                                Der Vorfaktor <strong>a</strong> vor dem Kosinus beeinflusst die Höhe der Wellen (Amplitude):
+                            </p>
+                            <ul>
+                                <li><strong>f(x) = a · cos(x)</strong></li>
+                                <li>Ist |a| &gt; 1 → <strong>Streckung</strong> in y-Richtung (höhere Wellen)</li>
+                                <li>Ist 0 &lt; |a| &lt; 1 → <strong>Stauchung</strong> in y-Richtung (flachere Wellen)</li>
+                                <li>Ist a &lt; 0 → zusätzlich <strong>Spiegelung an der x-Achse</strong></li>
+                            </ul>
+                            <p>Beispiele:</p>
+                            <ul>
+                                <li><strong>f(x) = 2 · cos(x)</strong> → Amplitude = 2</li>
+                                <li><strong>f(x) = 0.5 · cos(x)</strong> → Amplitude = 0.5</li>
+                                <li><strong>f(x) = -1 · cos(x)</strong> → gespiegelt an der x-Achse</li>
+                            </ul>
 
-                <h3>3.2 Streckung/Stauchung entlang der x-Achse (Frequenz/Periode)</h3>
-                <p>
-                    Der Faktor <strong>b</strong> im Argument beeinflusst, wie „schnell“ die Wellen schwingen:
-                </p>
-                <ul>
-                    <li><strong>f(x) = cos(b · x)</strong></li>
-                    <li>Ist |b| &gt; 1 → <strong>Stauchung</strong> in x-Richtung (mehr Wellen pro Intervall)</li>
-                    <li>Ist 0 &lt; |b| &lt; 1 → <strong>Streckung</strong> in x-Richtung (weniger Wellen pro Intervall)</li>
-                </ul>
-                <p>Die Periodenlänge ergibt sich durch: <strong>P = 2π / |b|</strong></p>
+                            <h3>3.2 Streckung/Stauchung entlang der x-Achse (Frequenz/Periode)</h3>
+                            <p>
+                                Der Faktor <strong>b</strong> im Argument beeinflusst, wie „schnell“ die Wellen schwingen:
+                            </p>
+                            <ul>
+                                <li><strong>f(x) = cos(b · x)</strong></li>
+                                <li>Ist |b| &gt; 1 → <strong>Stauchung</strong> in x-Richtung (mehr Wellen pro Intervall)</li>
+                                <li>Ist 0 &lt; |b| &lt; 1 → <strong>Streckung</strong> in x-Richtung (weniger Wellen pro Intervall)</li>
+                            </ul>
+                            <p>Die Periodenlänge ergibt sich durch: <strong>P = 2π / |b|</strong></p>
 
-                <p>Beispiele:</p>
-                <ul>
-                    <li><strong>f(x) = cos(2x)</strong> → doppelte Frequenz, halbe Periode</li>
-                    <li><strong>f(x) = cos(0.5x)</strong> → halbe Frequenz, doppelte Periode</li>
-                </ul>
-            </p>
-        </section>
-    </main>
-
-
-
-    <section class="exercise-section">
-        <h2 class="section-title">Übungsaufgaben zur Kosinusfunktion</h2>
-        <ol class="exercise-list">
-            <li>
-                Berechne den Wert von <strong>cos(30°) gerundet auf 3 Nachkommastellen</strong>.
-                <input type="text" id="answer1" class="exercise-input" placeholder="Deine Antwort">
-                <button onclick="checkAnswer(1)">Prüfen</button>
-                <span id="result1"></span>
-            </li>
-            <li>
-                Berechne den Wert von <strong>cos(90°)</strong>.
-                <input type="text" id="answer2" class="exercise-input" placeholder="Deine Antwort">
-                <button onclick="checkAnswer(2)">Prüfen</button>
-                <span id="result2"></span>
-            </li>
-            <li>
-                Ist die Gleichung <strong>cos(24°) = cos(-24°) </strong> richtig oder falsch
-                <input type="text" id="answer3" class="exercise-input" placeholder="Deine Antwort">
-                <button onclick="checkAnswer(3)">Prüfen</button>
-                <span id="result3"></span>
-            </li>
-            <li>
-                Gib die Amplitude der Funktion <strong>f(x) = 3·cos(x)</strong> an.
-                <input type="text" id="answer4" class="exercise-input" placeholder="Deine Antwort">
-                <button onclick="checkAnswer(4)">Prüfen</button>
-                <span id="result4"></span>
-            </li>
-        </ol>
-
-        <script>
-            function normalizeInput(str) {
-                return str.trim().replace(",", ".").toLowerCase();
-            }
-
-            function checkAnswer(num) {
-                let input = document.getElementById("answer" + num).value;
-                let result = document.getElementById("result" + num);
-                let correct = false;
-                switch (num) {
-                    case 1:
-                        // cos(30°) = 0,707
-                        correct = (normalizeInput(input) === "0,707");
-                        break;
-                    case 2:
-                        // cos(90°) = 0
-                        correct = (normalizeInput(input) === "0");
-                        break;
-                    case 3:
-                        // cos(24°) = cos(-24°) ⇒ richtig
-                        correct = (normalizeInput(input) === "richtig" || normalizeInput(input) === "wahr");
-                        break;
-                    case 4:
-                        // Amplitude = 3
-                        correct = (normalizeInput(input) === "3");
-                        break;
-                }
-                result.innerText = correct ? "✅ Richtig!" : "❌ Falsch, versuch es nochmal!";
-                result.style.color = correct ? "limegreen" : "crimson";
-            }
-        </script>
-        <div id="disqus_thread"></div>
-        <script>
-            var disqus_config = function() {
-                this.page.url = window.location.href;
-                this.page.identifier = window.location.pathname;
-            };
-            (function() {
-                var d = document,
-                    s = d.createElement('script');
-                s.src = 'https://onlinereglheft.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-            })();
-        </script>
-        <noscript>Bitte aktiviere JavaScript, um die Kommentare von Disqus zu sehen.</noscript>
+                            <p>Beispiele:</p>
+                            <ul>
+                                <li><strong>f(x) = cos(2x)</strong> → doppelte Frequenz, halbe Periode</li>
+                                <li><strong>f(x) = cos(0.5x)</strong> → halbe Frequenz, doppelte Periode</li>
+                            </ul>
+                        </p>
+                    </section>
+                </main>
 
 
-        <section id="support-section" class="support-section">
-            <div class="support-form-container">
-                <iframe id="support-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdmiV5QAxRym99E-5Jt5t7LWLcLis0Kye1GV2v_Ig_CxFY1XA/viewform?embedded=true" width="640" height="686" frameborder="0" marginheight="0" marginwidth="0" allowfullscreen>Wird geladen…</iframe>
-            </div>
-        </section>
+
+                <section class="exercise-section">
+                    <h2 class="section-title">Übungsaufgaben zur Kosinusfunktion</h2>
+                    <ol class="exercise-list">
+                        <li>
+                            Berechne den Wert von <strong>cos(30°) gerundet auf 3 Nachkommastellen</strong>.
+                            <input type="text" id="answer1" class="exercise-input" placeholder="Deine Antwort">
+                            <button onclick="checkAnswer(1)">Prüfen</button>
+                            <span id="result1"></span>
+                        </li>
+                        <li>
+                            Berechne den Wert von <strong>cos(90°)</strong>.
+                            <input type="text" id="answer2" class="exercise-input" placeholder="Deine Antwort">
+                            <button onclick="checkAnswer(2)">Prüfen</button>
+                            <span id="result2"></span>
+                        </li>
+                        <li>
+                            Ist die Gleichung <strong>cos(24°) = cos(-24°) </strong> richtig oder falsch
+                            <input type="text" id="answer3" class="exercise-input" placeholder="Deine Antwort">
+                            <button onclick="checkAnswer(3)">Prüfen</button>
+                            <span id="result3"></span>
+                        </li>
+                        <li>
+                            Gib die Amplitude der Funktion <strong>f(x) = 3·cos(x)</strong> an.
+                            <input type="text" id="answer4" class="exercise-input" placeholder="Deine Antwort">
+                            <button onclick="checkAnswer(4)">Prüfen</button>
+                            <span id="result4"></span>
+                        </li>
+                    </ol>
+
+                    <script>
+                        function normalizeInput(str) {
+                            return str.trim().replace(",", ".").toLowerCase();
+                        }
+
+                        function checkAnswer(num) {
+                            let input = document.getElementById("answer" + num).value;
+                            let result = document.getElementById("result" + num);
+                            let correct = false;
+                            switch (num) {
+                                case 1:
+                                    // cos(30°) = 0,707
+                                    correct = (normalizeInput(input) === "0,707");
+                                    break;
+                                case 2:
+                                    // cos(90°) = 0
+                                    correct = (normalizeInput(input) === "0");
+                                    break;
+                                case 3:
+                                    // cos(24°) = cos(-24°) ⇒ richtig
+                                    correct = (normalizeInput(input) === "richtig" || normalizeInput(input) === "wahr");
+                                    break;
+                                case 4:
+                                    // Amplitude = 3
+                                    correct = (normalizeInput(input) === "3");
+                                    break;
+                            }
+                            result.innerText = correct ? "✅ Richtig!" : "❌ Falsch, versuch es nochmal!";
+                            result.style.color = correct ? "limegreen" : "crimson";
+                        }
+                    </script>
+                    <div id="disqus_thread"></div>
+                    <script>
+                        var disqus_config = function() {
+                            this.page.url = window.location.href;
+                            this.page.identifier = window.location.pathname;
+                        };
+                        (function() {
+                            var d = document,
+                                s = d.createElement('script');
+                            s.src = 'https://onlinereglheft.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                    <noscript>Bitte aktiviere JavaScript, um die Kommentare von Disqus zu sehen.</noscript>
+
+
+                    <section id="support-section" class="support-section">
+                        <div class="support-form-container">
+                            <iframe id="support-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdmiV5QAxRym99E-5Jt5t7LWLcLis0Kye1GV2v_Ig_CxFY1XA/viewform?embedded=true" width="640" height="686" frameborder="0" marginheight="0" marginwidth="0" allowfullscreen>Wird geladen…</iframe>
+                        </div>
+                    </section>
 
 </body>
 
-</html>
+</html>hiebung
+</a>
+</p>
+</section>
+<section>
+    <p>
+        <a href="#kapitel3" title="Weiter zu Kapitel 3">
+        ↓ Kapitel 3: Streckung/Stauchung
+      </a>
+    </p>
+</section>
+<section>
+    <h2>Definition</h2>
+    <p>Die <strong>Kosinusfunktion</strong> (kurz:cos) ist eine mathematische Funktion, die einem Winkel einen bestimmten Zahlenwert zuordnet. Man kennt sie vor allem aus der <strong>Trigonometrie</strong>. In einem rechtwinkligen Dreieck ist der Kosinus
+        eines Winkels das Verhältnis von <strong>Ankathete</strong> zu <strong>Hypotenuse</strong>. In einem Einheitskreis, der einen Radius von 1 hat, entspricht der Kosinus eines Winkels dem x-Koordinatenwert des Punktes, an dem der Strahl, der den
+        Winkel bildet, den Kreis schneidet.</p>
+    <h2>Graph</h2>
+    <div class="responsive-iframe-container">
+        <iframe src="https://www.geogebra.org/classic/qnj3r7f9?embed/ai/false/smb/false/stb/false" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+    </div>
+    <h2>Eigenschaften</h2>
+    <ul>
+        <li>Periodisch mit Periode 2π</li>
+        <li>Wertebereich: [-1, 1]</li>
+        <li>Nullstellen bei nπ mit n ∈ ℤ</li>
+    </ul>
+
+    <div class="video-section">
+        <h3 class="vid-headline">Erklärvideo zur Kosnusfunktion</h3>
+        <div class="youtube-responsive">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/P2JlHT--q6o?si=l-Ks0USOKeXRGHIJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+</section> <br><br>
+<section id="kapitel2">
+    <h1>2. Verschiebung der Kosnusfunktion</h1>
+    <p>
+        <p>Die Kosinusfunktion <strong>f(x) = cos(x)</strong> kann in verschiedene Richtungen verschoben werden:</p>
+
+        <h3>2.1 Vertikale Verschiebung (nach oben/unten)</h3>
+        <p>
+            Wenn man zur Funktion einen konstanten Wert addiert oder subtrahiert, verschiebt sich der Graph entlang der y-Achse:
+        </p>
+        <ul>
+            <li><strong>f(x) = cos(x) + c</strong> &rarr; verschiebt den Graphen um <em>c</em> Einheiten <strong>nach oben</strong></li>
+            <li><strong>f(x) = cos(x) - c</strong> &rarr; verschiebt ihn um <em>c</em> Einheiten <strong>nach unten</strong></li>
+        </ul>
+        <p>Beispiel:<br>
+            <strong>f(x) = cos(x) + 2</strong> &rarr; Der Scheitelpunkt liegt jetzt bei <strong>y = 3</strong> statt bei <strong>y = 1</strong>
+        </p>
+
+        <h3>2.2 Horizontale Verschiebung (nach links/rechts)</h3>
+        <p>
+            Wenn man im Argument der Kosinusfunktion einen Wert addiert oder subtrahiert, verschiebt sich der Graph entlang der x-Achse:
+        </p>
+        <ul>
+            <li><strong>f(x) = cos(x - a)</strong> &rarr; verschiebt den Graphen um <em>a</em> Einheiten <strong>nach rechts</strong></li>
+            <li><strong>f(x) = cos(x + a)</strong> &rarr; verschiebt ihn um <em>a</em> Einheiten <strong>nach links</strong></li>
+        </ul>
+        <p>Beispiel:<br>
+            <strong>f(x) = cos(x - π/2)</strong> &rarr; Der Y-Achsenabschnitt liegt nun bei 0 statt 1.
+        </p>
+    </p>
+</section><br><br>
+<section id="kapitel3">
+    <h1>3. Streckung und Stauchung der Kosinusfunktion</h1>
+    <p>
+        <p>
+            Die Kosinusfunktion <strong>f(x) = cos(x)</strong> kann durch Multiplikation mit einem Faktor gestreckt oder gestaucht werden.
+        </p>
+
+        <h3>3.1 Streckung/Stauchung entlang der y-Achse (Amplitude)</h3>
+        <p>
+            Der Vorfaktor <strong>a</strong> vor dem Kosinus beeinflusst die Höhe der Wellen (Amplitude):
+        </p>
+        <ul>
+            <li><strong>f(x) = a · cos(x)</strong></li>
+            <li>Ist |a| &gt; 1 → <strong>Streckung</strong> in y-Richtung (höhere Wellen)</li>
+            <li>Ist 0 &lt; |a| &lt; 1 → <strong>Stauchung</strong> in y-Richtung (flachere Wellen)</li>
+            <li>Ist a &lt; 0 → zusätzlich <strong>Spiegelung an der x-Achse</strong></li>
+        </ul>
+        <p>Beispiele:</p>
+        <ul>
+            <li><strong>f(x) = 2 · cos(x)</strong> → Amplitude = 2</li>
+            <li><strong>f(x) = 0.5 · cos(x)</strong> → Amplitude = 0.5</li>
+            <li><strong>f(x) = -1 · cos(x)</strong> → gespiegelt an der x-Achse</li>
+        </ul>
+
+        <h3>3.2 Streckung/Stauchung entlang der x-Achse (Frequenz/Periode)</h3>
+        <p>
+            Der Faktor <strong>b</strong> im Argument beeinflusst, wie „schnell“ die Wellen schwingen:
+        </p>
+        <ul>
+            <li><strong>f(x) = cos(b · x)</strong></li>
+            <li>Ist |b| &gt; 1 → <strong>Stauchung</strong> in x-Richtung (mehr Wellen pro Intervall)</li>
+            <li>Ist 0 &lt; |b| &lt; 1 → <strong>Streckung</strong> in x-Richtung (weniger Wellen pro Intervall)</li>
+        </ul>
+        <p>Die Periodenlänge ergibt sich durch: <strong>P = 2π / |b|</strong></p>
+
+        <p>Beispiele:</p>
+        <ul>
+            <li><strong>f(x) = cos(2x)</strong> → doppelte Frequenz, halbe Periode</li>
+            <li><strong>f(x) = cos(0.5x)</strong> → halbe Frequenz, doppelte Periode</li>
+        </ul>
+    </p>
+    <div class="video-section">
+        <h3 class="vid-headline">Erklärvideo zu Kapitel 2 und 3</h3>
+        <div class="youtube-responsive">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/T7L-i_Th2Ew?si=ty7mkpc40Zdgpffl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+</section>
+</main>
+
+
+
+<section class="exercise-section">
+    <h2 class="section-title">Übungsaufgaben zur Kosinusfunktion</h2>
+    <ol class="exercise-list">
+        <li>
+            Berechne den Wert von <strong>cos(30°) gerundet auf 3 Nachkommastellen</strong>.
+            <input type="text" id="answer1" class="exercise-input" placeholder="Deine Antwort">
+            <button onclick="checkAnswer(1)">Prüfen</button>
+            <span id="result1"></span>
+        </li>
+        <li>
+            Berechne den Wert von <strong>cos(90°)</strong>.
+            <input type="text" id="answer2" class="exercise-input" placeholder="Deine Antwort">
+            <button onclick="checkAnswer(2)">Prüfen</button>
+            <span id="result2"></span>
+        </li>
+        <li>
+            Ist die Gleichung <strong>cos(24°) = cos(-24°) </strong> richtig oder falsch
+            <input type="text" id="answer3" class="exercise-input" placeholder="Deine Antwort">
+            <button onclick="checkAnswer(3)">Prüfen</button>
+            <span id="result3"></span>
+        </li>
+        <li>
+            Gib die Amplitude der Funktion <strong>f(x) = 3·cos(x)</strong> an.
+            <input type="text" id="answer4" class="exercise-input" placeholder="Deine Antwort">
+            <button onclick="checkAnswer(4)">Prüfen</button>
+            <span id="result4"></span>
+        </li>
+    </ol>
+
+    <script>
+        function normalizeInput(str) {
+            return str.trim().replace(",", ".").toLowerCase();
+        }
+
+        function checkAnswer(num) {
+            let input = document.getElementById("answer" + num).value;
+            let result = document.getElementById("result" + num);
+            let correct = false;
+            switch (num) {
+                case 1:
+                    // cos(30°) = 0,707
+                    correct = (normalizeInput(input) === "0,707");
+                    break;
+                case 2:
+                    // cos(90°) = 0
+                    correct = (normalizeInput(input) === "0");
+                    break;
+                case 3:
+                    // cos(24°) = cos(-24°) ⇒ richtig
+                    correct = (normalizeInput(input) === "richtig" || normalizeInput(input) === "wahr");
+                    break;
+                case 4:
+                    // Amplitude = 3
+                    correct = (normalizeInput(input) === "3");
+                    break;
+            }
+            result.innerText = correct ? "✅ Richtig!" : "❌ Falsch, versuch es nochmal!";
+            result.style.color = correct ? "limegreen" : "crimson";
+        }
+    </script>
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function() {
+            this.page.url = window.location.href;
+            this.page.identifier = window.location.pathname;
+        };
+        (function() {
+            var d = document,
+                s = d.createElement('script');
+            s.src = 'https://onlinereglheft.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Bitte aktiviere JavaScript, um die Kommentare von Disqus zu sehen.</noscript>
+
+
+    <section id="support-section" class="support-section">
+        <div class="support-form-container">
+            <iframe id="support-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdmiV5QAxRym99E-5Jt5t7LWLcLis0Kye1GV2v_Ig_CxFY1XA/viewform?embedded=true" width="640" height="686" frameborder="0" marginheight="0" marginwidth="0" allowfullscreen>Wird geladen…</iframe>
+        </div>
+    </section>
+
+    </body>
+
+    </html>
